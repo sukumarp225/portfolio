@@ -1,0 +1,67 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f4f8; /* Light blue-gray background */
+    color: #1e293b; /* Slate-800 */
+}
+
+.hero-bg {
+    background-color: #0f172a; /* Slate-900 */
+    background-image: radial-gradient(circle at top right, rgba(14, 165, 233, 0.1), transparent 40%),
+                      radial-gradient(circle at bottom left, rgba(59, 130, 246, 0.1), transparent 40%);
+}
+
+.section-title {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 3px;
+    background-color: #3b82f6; /* Blue-500 */
+    border-radius: 9999px;
+}
+
+.skill-card, .project-card, .experience-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover, .project-card:hover, .experience-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.nav-link.active {
+    color: #3b82f6;
+    font-weight: 600;
+}
+
+.nav-link {
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #3b82f6;
+}
+
+.mobile-menu {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* Fade-in animation classes */
+.fade-in-hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
